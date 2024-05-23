@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row" id="wrapper">
+        <div class="border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                <div class="user-image-upload">
+                    <label for="imageUpload" class="image-label">
+                        <img id="userImage" src="" alt="" class="img-thumbnail">
+                        <span class="username-overlay">John Doe</span>
+                    </label>
+                </div>
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"><i class="fas fa-home me-2 mx-3"></i>Home</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-calendar me-2 mx-3"></i>Calendar</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-chart-line me-2 mx-3"></i>Reports</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-gift me-2 mx-3"></i>Offers</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-user me-2 mx-3"></i>Profile</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i class="fas fa-power-off me-2 mx-3"></i>Logout</a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-2">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="p-3 d-flex justify-content-around align-items-center rounded">
+                            <button id="expenseBtn" class="btn btn-primary btn-lg mx-7">Expense</button>
+                            <button id="incomeBtn" class="btn btn-primary btn-lg mx-3">Income</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card" width="100%">
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="date" class="form-label">Date:</label>
+                                        <input type="date" class="form-control" id="date">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="note" class="form-label">Note:</label>
+                                        <input type="text" class="form-control" id="note">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="amount" class="form-label">Expense Amount:</label>
+                                        <input type="number" class="form-control" id="amount" placeholder="$">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="category" class="form-label">Category:</label>
+                                        <div class="d-flex flex-wrap align-items-center gap-2">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <button type="button" class="btn btn-outline-primary"><i class="fas fa-utensils fa-lg mx-4"></i>Food</button>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="button" class="btn btn-outline-primary"><i class="fas fa-home fa-lg mx-4"></i>Housing</button>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="button" class="btn btn-outline-primary"><i class="fas fa-graduation-cap fa-lg mx-4"></i>Education</button>
+                                                </div>
+                                            </div>
+                                            <div class="row my-2">
+                                                <div class="col-md-4">
+                                                    <button type="button" class="btn btn-outline-primary"><i class="fas fa-file-invoice-dollar fa-lg mx-4"></i>Checks</button>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="button" class="btn btn-outline-primary"><i class="fas fa-bus-alt fa-lg mx-4"></i>Transportation</button>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="button" class="btn btn-outline-primary"><i class="fas fa-plus fa-lg mx-4"></i>More</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
