@@ -132,9 +132,13 @@ class App {
             }
         }));
         this.expressApp.use('/', router);
+        this.expressApp.get('*', (req, res) => {
+            res.sendFile(__dirname + '/dist/frontend/browser/index.html');
+        });
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));
         this.expressApp.use('/images', express.static(__dirname + '/img'));
-        this.expressApp.use('/', express.static(__dirname + '/pages'));
+        //this.expressApp.use('/', express.static(__dirname+'/pages'));
+        this.expressApp.use('/', express.static(__dirname + '/dist'));
     }
 }
 exports.App = App;
